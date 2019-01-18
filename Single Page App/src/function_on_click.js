@@ -15,9 +15,9 @@ function add_and_display_message() {
 };
 
 function add_and_display_message_using_classes() {
-     let message = new Message(textbox.value);
+     let message = new Message(textbox.value, newDate);
      let newMessage = document.createElement("ul");
-     newMessage.innerText = message.text ;
+     newMessage.innerText = `${message.text} \n ${message.time}`;
      messages.prepend(newMessage);
      textbox.value = "";
 };

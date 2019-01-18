@@ -1,6 +1,7 @@
 class Message {
-  constructor(text) {
+  constructor(text, time = new Date) {
     this.text = text;
+    this.time = time
   }
 
   getText(){
@@ -8,7 +9,7 @@ class Message {
   }
 
   getDate(){
-    return this.newDate;
+    return this.time;
   }
 
 }
