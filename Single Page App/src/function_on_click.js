@@ -15,11 +15,11 @@ function add_and_display_message() {
 };
 
 function add_and_display_message_using_classes() {
-     let message = new Message(messageText.value);
+     let message = new Message(textbox.value);
      let newMessage = document.createElement("ul");
-     newMessage.innerText = '${message.text}';
+     newMessage.innerText = message.text ;
      messages.prepend(newMessage);
-     messageText.value = "";
+     textbox.value = "";
 };
 
 button.addEventListener("click", add_and_display_message_using_classes);

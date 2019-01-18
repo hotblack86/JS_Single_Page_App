@@ -1,7 +1,6 @@
 class Message {
-  constructor(text, newDate = new Date()) {
+  constructor(text) {
     this.text = text;
-    this.newDate = newDate;
   }
 
   getText(){
