@@ -6,11 +6,20 @@ var newDate = new Date();
 
 
 
+
 function add_and_display_message() {
-     var newMessage = document.createElement("ul");
+     let newMessage = document.createElement("ul");
      newMessage.innerHTML = textbox.value;
      messages.prepend(newMessage, newDate);
      textbox.value = "";
 };
 
-button.addEventListener("click", add_and_display_message);
+function add_and_display_message_using_classes() {
+     let message = new Message(messageText.value);
+     let newMessage = document.createElement("ul");
+     newMessage.innerText = '${message.text}';
+     messages.prepend(newMessage);
+     messageText.value = "";
+};
+
+button.addEventListener("click", add_and_display_message_using_classes);
